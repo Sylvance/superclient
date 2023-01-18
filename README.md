@@ -1,8 +1,6 @@
 # Superclient
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/superclient`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+One client to rule them all. Superclient helps you to query all kinds of endpoints. It can interact with REST, SOAP and gRPC endpoints.
 
 ## Installation
 
@@ -16,7 +14,35 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+Example of how it works for queries in XML SOAP, protobuf, and HTTP endpoints;
+
+```ruby
+require 'superclient'
+
+client = Superclient.new
+client.configure do |config|
+  config.endpoint = 'https://example.com'
+  config.format = :xml
+end
+
+response = client.query('get_data', {param1: 'value1', param2: 'value2'})
+
+# To query protobuf endpoint
+client.configure do |config|
+  config.endpoint = 'https://example.com'
+  config.format = :protobuf
+end
+
+response = client.query('get_data', {param1: 'value1', param2: 'value2'})
+
+# To query http endpoint
+client.configure do |config|
+  config.endpoint = 'https://example.com'
+  config.format = :http
+end
+
+response = client.query('get_data', {param1: 'value1', param2: 'value2'})
+```
 
 ## Development
 
@@ -26,8 +52,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/superclient. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/superclient/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/Sylvance/superclient. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/Sylvance/superclient/blob/main/CODE_OF_CONDUCT.md).
 
 ## Code of Conduct
 
-Everyone interacting in the Superclient project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/superclient/blob/main/CODE_OF_CONDUCT.md).
+Everyone interacting in the Superclient project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/Sylvance/superclient/blob/main/CODE_OF_CONDUCT.md).
