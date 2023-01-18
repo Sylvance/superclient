@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email = ["kerandisylvance@gmail.com"]
 
   spec.summary = "One client to rule them all."
-  spec.description = "Superclient helps you to query all kinds of endpoints. It can interact with REST, SOAP and gRPC endpoints."
+  spec.description = "Superclient queries all kinds of endpoints. Interacts with REST, SOAP and gRPC endpoints."
   spec.homepage = "https://github.com/Sylvance/superclient/blob/main/README.md"
   spec.required_ruby_version = ">= 2.6.0"
 

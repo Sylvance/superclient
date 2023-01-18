@@ -1,6 +1,6 @@
 # Superclient
 
-One client to rule them all. Superclient helps you to query all kinds of endpoints. It can interact with REST, SOAP and gRPC endpoints.
+One client to rule them all. Superclient queries all kinds of endpoints. Interacts with REST, SOAP and gRPC endpoints.
 
 ## Installation
 
